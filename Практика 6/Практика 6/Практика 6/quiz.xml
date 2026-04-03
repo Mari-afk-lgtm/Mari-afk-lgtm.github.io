@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quiz>
+
+	<topic name="19 век">
+
+		<!-- УРОВЕНЬ 1 (Лёгкий) - 5 вопросов -->
+		<level difficulty="1" name="Лёгкий">
+			<question>
+				<image>images/19century/van_gogh_starry_night.jpg</image>
+				<text>Звёздная ночь</text>
+				<correct>Винсент Ван Гог</correct>
+				<wrong>Клод Моне</wrong>
+				<wrong>Поль Гоген</wrong>
+				<wrong>Эдгар Дега</wrong>
+				<hint>Нидерландский художник-постимпрессионист, отрезал себе ухо.</hint>
+			</question>
+			<question>
+				<image>images/19century/monet_water_lilies.jpg</image>
+				<text>Водяные лилии</text>
+				<correct>Клод Моне</correct>
+				<wrong>Пьер Огюст Ренуар</wrong>
+				<wrong>Камиль Писсарро</wrong>
+				<wrong>Альфред Сислей</wrong>
+				<hint>Основоположник импрессионизма.</hint>
+			</question>
+			<question>
+				<image>images/19century/renoir_ball_at_bougival.jpg</image>
+				<text>Бал в Буживале</text>
+				<correct>Пьер Огюст Ренуар</correct>
+				<wrong>Эдуард Мане</wrong>
+				<wrong>Фредерик Базиль</wrong>
+				<wrong>Гюстав Кайботт</wrong>
+				<hint>Французский импрессионист, мастер портрета.</hint>
+			</question>
+			<question>
+				<image>images/19century/manet_olympia.jpg</image>
+				<text>Олимпия</text>
+				<correct>Эдуард Мане</correct>
+				<wrong>Клод Моне</wrong>
+				<wrong>Эдгар Дега</wrong>
+				<wrong>Анри де Тулуз-Лотрек</wrong>
+				<hint>Вызвал скандал в Парижском салоне.</hint>
+			</question>
+			<question>
+				<image>images/19century/degas_blue_dancers.jpg</image>
+				<text>Голубые танцовщицы</text>
+				<correct>Эдгар Дега</correct>
+				<wrong>Пьер Огюст Ренуар</wrong>
+				<wrong>Мэри Кассат</wrong>
+				<wrong>Берта Моризо</wrong>
+				<hint>Известен картинами балерин.</hint>
+			</question>
+		</level>
+
+		<!-- УРОВЕНЬ 2 (Средний) - 5 вопросов -->
+		<level difficulty="2" name="Средний">
+			<question>
+				<image>images/19century/repin_volga_barge_haulers.jpg</image>
+				<text>Бурлаки на Волге</text>
+				<correct>Илья Репин</correct>
+				<wrong>Иван Крамской</wrong>
+				<wrong>Василий Перов</wrong>
+				<wrong>Иван Шишкин</wrong>
+				<hint>Русский художник-передвижник.</hint>
+			</question>
+			<question>
+				<image>images/19century/bryullov_last_day_of_pompeii.jpg</image>
+				<text>Последний день Помпеи</text>
+				<correct>Карл Брюллов</correct>
+				<wrong>Александр Иванов</wrong>
+				<wrong>Орест Кипренский</wrong>
+				<wrong>Василий Тропинин</wrong>
+				<hint>Русский художник-романтик.</hint>
+			</question>
+			<question>
+				<image>images/19century/shi_shkin_morning_in_pine_forest.jpg</image>
+				<text>Утро в сосновом лесу</text>
+				<correct>Иван Шишкин</correct>
+				<wrong>Исаак Левитан</wrong>
+				<wrong>Архип Куинджи</wrong>
+				<wrong>Василий Поленов</wrong>
+				<hint>Мастер пейзажа.</hint>
+			</question>
+			<question>
+				<image>images/19century/surikov_boyarynya_morozova.jpg</image>
+				<text>Боярыня Морозова</text>
+				<correct>Василий Суриков</correct>
+				<wrong>Илья Репин</wrong>
+				<wrong>Виктор Васнецов</wrong>
+				<wrong>Михаил Нестеров</wrong>
+				<hint>Мастер исторической живописи.</hint>
+			</question>
+			<question>
+				<image>images/19century/levitan_above_eternal_peace.jpg</image>
+				<text>Над вечным покоем</text>
+				<correct>Исаак Левитан</correct>
+				<wrong>Алексей Саврасов</wrong>
+				<wrong>Фёдор Васильев</wrong>
+				<wrong>Иван Шишкин</wrong>
+				<hint>Мастер пейзажа настроения.</hint>
+			</question>
+		</level>
+
+		<!-- УРОВЕНЬ 3 (Сложный) - 5 вопросов -->
+		<level difficulty="3" name="Сложный">
+			<question>
+				<image>images/19century/goya_third_of_may.jpg</image>
+				<text>Расстрел повстанцев 3 мая 1808</text>
+				<correct>Франсиско Гойя</correct>
+				<wrong>Диего Веласкес</wrong>
+				<wrong>Эль Греко</wrong>
+				<wrong>Бартоломе Мурильо</wrong>
+				<hint>Испанский художник.</hint>
+			</question>
+			<question>
+				<image>images/19century/delacroix_liberty_leading_people.jpg</image>
+				<text>Свобода, ведущая народ</text>
+				<correct>Эжен Делакруа</correct>
+				<wrong>Теодор Жерико</wrong>
+				<wrong>Жан Огюст Доминик Энгр</wrong>
+				<wrong>Гюстав Курбе</wrong>
+				<hint>Символ Июльской революции.</hint>
+			</question>
+			<question>
+				<image>images/19century/gericault_raft_of_medusa.jpg</image>
+				<text>Плот «Медузы»</text>
+				<correct>Теодор Жерико</correct>
+				<wrong>Эжен Делакруа</wrong>
+				<wrong>Антуан Гро</wrong>
+				<wrong>Жак Луи Давид</wrong>
+				<hint>Основатель французского романтизма.</hint>
+			</question>
+			<question>
+				<image>images/19century/millet_gleaners.jpg</image>
+				<text>Собирательницы колосьев</text>
+				<correct>Жан Франсуа Милле</correct>
+				<wrong>Гюстав Курбе</wrong>
+				<wrong>Оноре Домье</wrong>
+				<wrong>Камиль Коро</wrong>
+				<hint>Певец крестьянской жизни.</hint>
+			</question>
+			<question>
+				<image>images/19century/friedrich_wanderer_above_sea_fog.jpg</image>
+				<text>Странник над морем тумана</text>
+				<correct>Каспар Давид Фридрих</correct>
+				<wrong>Филипп Отто Рунге</wrong>
+				<wrong>Йозеф Антон Кох</wrong>
+				<wrong>Карл Блехен</wrong>
+				<hint>Немецкий художник-романтик.</hint>
+			</question>
+		</level>
+
+	</topic>
+</quiz>
