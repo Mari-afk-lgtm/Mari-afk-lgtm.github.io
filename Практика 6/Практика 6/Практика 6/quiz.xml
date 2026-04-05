@@ -3,10 +3,10 @@
 
 	<topic name="19 век">
 
-		<!-- УРОВЕНЬ 1 (Лёгкий) - 5 вопросов -->
+		<!-- УРОВЕНЬ 1 (Лёгкий) - 10 вопросов -->
 		<level difficulty="1" name="Лёгкий">
 			<question>
-				<image>images/19century/van_gogh_starry_night.jpg</image>
+				<image>images/starry_night.jpg</image>
 				<text>Звёздная ночь</text>
 				<correct>Винсент Ван Гог</correct>
 				<wrong>Клод Моне</wrong>
@@ -15,7 +15,7 @@
 				<hint>Нидерландский художник-постимпрессионист, отрезал себе ухо.</hint>
 			</question>
 			<question>
-				<image>images/19century/monet_water_lilies.jpg</image>
+				<image>images/lilies.jpg</image>
 				<text>Водяные лилии</text>
 				<correct>Клод Моне</correct>
 				<wrong>Пьер Огюст Ренуар</wrong>
@@ -24,7 +24,7 @@
 				<hint>Основоположник импрессионизма.</hint>
 			</question>
 			<question>
-				<image>images/19century/renoir_ball_at_bougival.jpg</image>
+				<image>images/bal.jpg</image>
 				<text>Бал в Буживале</text>
 				<correct>Пьер Огюст Ренуар</correct>
 				<wrong>Эдуард Мане</wrong>
@@ -33,7 +33,7 @@
 				<hint>Французский импрессионист, мастер портрета.</hint>
 			</question>
 			<question>
-				<image>images/19century/manet_olympia.jpg</image>
+				<image>images/olympia.jpg</image>
 				<text>Олимпия</text>
 				<correct>Эдуард Мане</correct>
 				<wrong>Клод Моне</wrong>
@@ -42,7 +42,7 @@
 				<hint>Вызвал скандал в Парижском салоне.</hint>
 			</question>
 			<question>
-				<image>images/19century/degas_blue_dancers.jpg</image>
+				<image>images/blue_dancers.jpg</image>
 				<text>Голубые танцовщицы</text>
 				<correct>Эдгар Дега</correct>
 				<wrong>Пьер Огюст Ренуар</wrong>
@@ -50,12 +50,62 @@
 				<wrong>Берта Моризо</wrong>
 				<hint>Известен картинами балерин.</hint>
 			</question>
+
+			<question>
+				<image>images/sun.jpg</image>
+				<text>Впечатление. Восходящее солнце</text>
+				<correct>Клод Моне</correct>
+				<wrong>Пьер Огюст Ренуар</wrong>
+				<wrong>Камиль Писсарро</wrong>
+				<wrong>Альфред Сислей</wrong>
+				<hint>Эта картина дала название целому художественному направлению.</hint>
+			</question>
+
+			<question>
+				<image>images/flowers.jpg</image>
+				<text>Подсолнухи</text>
+				<correct>Винсент Ван Гог</correct>
+				<wrong>Поль Гоген</wrong>
+				<wrong>Поль Сезанн</wrong>
+				<wrong>Анри де Тулуз-Лотрек</wrong>
+				<hint>Нидерландский художник написал несколько версий этой картины для украшения комнаты друга.</hint>
+			</question>
+
+			<question>
+				<image>images/Galette.jpg</image>
+				<text>Бал в Мулен де ла Галетт</text>
+				<correct>Пьер Огюст Ренуар</correct>
+				<wrong>Эдуард Мане</wrong>
+				<wrong>Эдгар Дега</wrong>
+				<wrong>Гюстав Кайботт</wrong>
+				<hint>Французский импрессионист, мастер солнечных бликов.</hint>
+			</question>
+
+			<question>
+				<image>images/lesson.jpg</image>
+				<text>Урок танца</text>
+				<correct>Эдгар Дега</correct>
+				<wrong>Пьер Огюст Ренуар</wrong>
+				<wrong>Эдуард Мане</wrong>
+				<wrong>Анри де Тулуз-Лотрек</wrong>
+				<hint>Известен своими работами с балеринами и необычными ракурсами.</hint>
+			</question>
+
+			<question>
+				<image>images/game_kart.jpg</image>
+				<text>Игроки в карты</text>
+				<correct>Поль Сезанн</correct>
+				<wrong>Винсент Ван Гог</wrong>
+				<wrong>Поль Гоген</wrong>
+				<wrong>Жорж Сёра</wrong>
+				<hint>Французский художник-постимпрессионист, которого называли "отцом современного искусства".</hint>
+			</question>
 		</level>
 
-		<!-- УРОВЕНЬ 2 (Средний) - 5 вопросов -->
+		<!-- УРОВЕНЬ 2 (Средний) - 10 вопросов -->
 		<level difficulty="2" name="Средний">
 			<question>
-				<image>images/19century/repin_volga_barge_haulers.jpg</image>
+				<image>images/Volga.jpg</image>
 				<text>Бурлаки на Волге</text>
 				<correct>Илья Репин</correct>
 				<wrong>Иван Крамской</wrong>
@@ -64,7 +114,7 @@
 				<hint>Русский художник-передвижник.</hint>
 			</question>
 			<question>
-				<image>images/19century/bryullov_last_day_of_pompeii.jpg</image>
+				<image>images/Last_day.jpg</image>
 				<text>Последний день Помпеи</text>
 				<correct>Карл Брюллов</correct>
 				<wrong>Александр Иванов</wrong>
@@ -73,7 +123,7 @@
 				<hint>Русский художник-романтик.</hint>
 			</question>
 			<question>
-				<image>images/19century/shi_shkin_morning_in_pine_forest.jpg</image>
+				<image>images/Shishkin,_Ivan_-_Morning_in_a_Pine_Forest.jpg</image>
 				<text>Утро в сосновом лесу</text>
 				<correct>Иван Шишкин</correct>
 				<wrong>Исаак Левитан</wrong>
@@ -82,7 +132,7 @@
 				<hint>Мастер пейзажа.</hint>
 			</question>
 			<question>
-				<image>images/19century/surikov_boyarynya_morozova.jpg</image>
+				<image>images/Vasily_Surikov_-_Боярыня_Морозова_-_Google_Art_Project_ed.jpg</image>
 				<text>Боярыня Морозова</text>
 				<correct>Василий Суриков</correct>
 				<wrong>Илья Репин</wrong>
@@ -91,7 +141,7 @@
 				<hint>Мастер исторической живописи.</hint>
 			</question>
 			<question>
-				<image>images/19century/levitan_above_eternal_peace.jpg</image>
+				<image>images/05.jpg</image>
 				<text>Над вечным покоем</text>
 				<correct>Исаак Левитан</correct>
 				<wrong>Алексей Саврасов</wrong>
@@ -99,12 +149,61 @@
 				<wrong>Иван Шишкин</wrong>
 				<hint>Мастер пейзажа настроения.</hint>
 			</question>
+			<question>
+				<image>images/Georges_Seurat_-_Oil_Sketch_for__La_Grande_Jatte__-_1981.15_-_Art_Institute_of_Chicago.jpg</image>
+				<text>Воскресный день на острове Гранд-Жатт</text>
+				<correct>Жорж Сёра</correct>
+				<wrong>Поль Синьяк</wrong>
+				<wrong>Камиль Писсарро</wrong>
+				<wrong>Анри Кросс</wrong>
+				<hint>Основатель пуантилизма, техники рисования точками.</hint>
+			</question>
+
+			<question>
+				<image>images/5058856600_68aec358ac_b.jpg</image>
+				<text>Откуда мы пришли? Кто мы? Куда мы идём?</text>
+				<correct>Поль Гоген</correct>
+				<wrong>Винсент Ван Гог</wrong>
+				<wrong>Поль Сезанн</wrong>
+				<wrong>Анри Руссо</wrong>
+				<hint>Французский художник, уехавший жить на Таити.</hint>
+			</question>
+
+			<question>
+				<image>images/160921_002.jpg</image>
+				<text>Богатыри</text>
+				<correct>Виктор Васнецов</correct>
+				<wrong>Илья Репин</wrong>
+				<wrong>Василий Суриков</wrong>
+				<wrong>Михаил Врубель</wrong>
+				<hint>Русский художник, мастер былинного и сказочного жанра.</hint>
+			</question>
+			<question>
+				<image>images/Apotheosis.jpg</image>
+				<text>Апофеоз войны</text>
+				<correct>Василий Верещагин</correct>
+				<wrong>Илья Репин</wrong>
+				<wrong>Василий Суриков</wrong>
+				<wrong>Николай Ге</wrong>
+				<hint>Русский художник-баталист, все картины посвятил войне.</hint>
+			</question>
+
+			<question>
+				<image>images/9d0f1f194d.jpg</image>
+				<text>Неизвестная</text>
+				<correct>Иван Крамской</correct>
+				<wrong>Илья Репин</wrong>
+				<wrong>Василий Перов</wrong>
+				<wrong>Николай Ге</wrong>
+				<hint>Портрет, на котором изображена загадочная женщина в карете.</hint>
+			</question>
 		</level>
 
-		<!-- УРОВЕНЬ 3 (Сложный) - 5 вопросов -->
+		
+		<!-- УРОВЕНЬ 3 (Сложный) - 10 вопросов -->
 		<level difficulty="3" name="Сложный">
 			<question>
-				<image>images/19century/goya_third_of_may.jpg</image>
+				<image>images/El_Tres_de_Mayo,_by_Francisco_de_Goya,_from_Prado_thin_black_margin.jpg</image>
 				<text>Расстрел повстанцев 3 мая 1808</text>
 				<correct>Франсиско Гойя</correct>
 				<wrong>Диего Веласкес</wrong>
@@ -113,7 +212,7 @@
 				<hint>Испанский художник.</hint>
 			</question>
 			<question>
-				<image>images/19century/delacroix_liberty_leading_people.jpg</image>
+				<image>images/Eugène_Delacroix_-_La_liberté_guidant_le_peuple_(cropped).jpg</image>
 				<text>Свобода, ведущая народ</text>
 				<correct>Эжен Делакруа</correct>
 				<wrong>Теодор Жерико</wrong>
@@ -122,7 +221,7 @@
 				<hint>Символ Июльской революции.</hint>
 			</question>
 			<question>
-				<image>images/19century/gericault_raft_of_medusa.jpg</image>
+				<image>images/Raft_of_the_Medusa.jpg</image>
 				<text>Плот «Медузы»</text>
 				<correct>Теодор Жерико</correct>
 				<wrong>Эжен Делакруа</wrong>
@@ -131,7 +230,7 @@
 				<hint>Основатель французского романтизма.</hint>
 			</question>
 			<question>
-				<image>images/19century/millet_gleaners.jpg</image>
+				<image>images/antikvarnaja_otkrytka_zh_mille_sborshchicy_kolosev_zhivopis.jpg</image>
 				<text>Собирательницы колосьев</text>
 				<correct>Жан Франсуа Милле</correct>
 				<wrong>Гюстав Курбе</wrong>
@@ -140,13 +239,59 @@
 				<hint>Певец крестьянской жизни.</hint>
 			</question>
 			<question>
-				<image>images/19century/friedrich_wanderer_above_sea_fog.jpg</image>
+				<image>images/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg</image>
 				<text>Странник над морем тумана</text>
 				<correct>Каспар Давид Фридрих</correct>
 				<wrong>Филипп Отто Рунге</wrong>
 				<wrong>Йозеф Антон Кох</wrong>
 				<wrong>Карл Блехен</wrong>
 				<hint>Немецкий художник-романтик.</hint>
+			</question>
+			<question>
+				<image>images/olympia.jpg</image>
+				<text>Олимпия</text>
+				<correct>Эдуард Мане</correct>
+				<wrong>Тициан</wrong>
+				<wrong>Гойя</wrong>
+				<wrong>Курбе</wrong>
+				<hint>Вызвала грандиозный скандал в Парижском салоне 1865 года.</hint>
+			</question>
+
+			<question>
+				<image>images/Rain_Steam_and_Speed_the_Great_Western_Railway.jpg</image>
+				<text>Дождь, пар и скорость</text>
+				<correct>Уильям Тёрнер</correct>
+				<wrong>Джон Констебл</wrong>
+				<wrong>Джеймс Уистлер</wrong>
+				<wrong>Томас Гейнсборо</wrong>
+				<hint>Британский художник-романтик, мастер изображения света и атмосферных явлений.</hint>
+			</question>
+			<question>
+				<image>images/bolshaja_kartina_telega_dlja_sena_dzhon_konstebl_maslo_kholst_baget_111kh82_sm.jpg</image>
+				<text>Телега для сена</text>
+				<correct>Джон Констебл</correct>
+				<wrong>Уильям Тёрнер</wrong>
+				<wrong>Томас Гейнсборо</wrong>
+				<wrong>Джошуа Рейнольдс</wrong>
+				<hint>Английский пейзажист, писавший родные места на реке Стур.</hint>
+			</question>
+			<question>
+				<image>images/Jean-auguste-dominique_ingres,_la_grande_odalisca,_1814,_01,1.jpg</image>
+				<text>Большая одалиска</text>
+				<correct>Жан Огюст Доминик Энгр</correct>
+				<wrong>Эжен Делакруа</wrong>
+				<wrong>Теодор Жерико</wrong>
+				<wrong>Жак Луи Давид</wrong>
+				<hint>Академист, прославившийся удлинёнными пропорциями тел.</hint>
+			</question>
+			<question>
+				<image>images/Gustave_Courbet_-_The_Stonebreakers_-_WGA05457.jpg</image>
+				<text>Дробильщики камней</text>
+				<correct>Гюстав Курбе</correct>
+				<wrong>Жан Франсуа Милле</wrong>
+				<wrong>Оноре Домье</wrong>
+				<wrong>Камиль Коро</wrong>
+				<hint>Лидер реализма, девиз "Пишите только то, что видите".</hint>
 			</question>
 		</level>
 

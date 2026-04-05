@@ -16,9 +16,9 @@ namespace Практика_6
         private List<XmlNode> currentSession;
         private int currentIndex = 0;
         private int score = 0;
-        private int timeLeft = 60;
+        private int timeLeft = 300;
         private Timer timer;
-        private int questionsPerSession = 5; // 5 вопросов за сеанс
+        private int questionsPerSession = 5; 
 
         public Form2(string topic, int level)
         {
@@ -36,9 +36,6 @@ namespace Практика_6
             DisplayCurrentQuestion();
             timer.Start();
         }
-
-        // ИСПРАВЛЕНО: загружает вопросы из выбранной темы и уровня
-       
            private void LoadQuestions()
         {
             XmlDocument doc = new XmlDocument();
@@ -46,40 +43,24 @@ namespace Практика_6
             questions = new List<XmlNode>();
 
             string xpath = $"/quiz/topic[@name='{topic}']/level[@difficulty='{level}']/question";
-
-            // ОТЛАДКА: показываем, что ищем
-            MessageBox.Show($"Ищем вопросы по пути: {xpath}");
-
             XmlNodeList allQuestions = doc.SelectNodes(xpath);
 
-            // ОТЛАДКА: сколько нашли
-            MessageBox.Show($"Найдено вопросов: {allQuestions.Count}");
-
             foreach (XmlNode q in allQuestions)
-            {
-                questions.Add(q);
-            }
-
+            {questions.Add(q);}
             if (questions.Count == 0)
             {
                 MessageBox.Show($"Вопросы не найдены!\nТема: '{topic}'\nУровень: {level}");
                 this.Close();
             }
         }
-        
-
-        // Выбрать 5 случайных вопросов для текущего сеанса
         private void StartNewSession()
         {
             Random rnd = new Random();
 
             if (questions.Count >= questionsPerSession)
-            {
-                currentSession = questions.OrderBy(q => rnd.Next()).Take(questionsPerSession).ToList();
-            }
+            {currentSession = questions.OrderBy(q => rnd.Next()).Take(questionsPerSession).ToList();}
             else
             {
-                // Если вопросов меньше 5, повторяем существующие
                 currentSession = new List<XmlNode>();
                 for (int i = 0; i < questionsPerSession; i++)
                 {
@@ -87,14 +68,11 @@ namespace Практика_6
                 }
                 currentSession = currentSession.OrderBy(q => rnd.Next()).ToList();
             }
-
             currentIndex = 0;
             score = 0;
             UpdateScoreLabel();
             UpdateQuestionCounter();
         }
-
-        // Отобразить текущий вопрос
         private void DisplayCurrentQuestion()
         {
             if (currentIndex >= currentSession.Count)
@@ -102,10 +80,8 @@ namespace Практика_6
                 FinishLevel();
                 return;
             }
-
             XmlNode q = currentSession[currentIndex];
 
-            // Текст вопроса (ищем в разных форматах)
             XmlNode textNode = q.SelectSingleNode("text");
             if (textNode != null)
                 label1.Text = textNode.InnerText;
@@ -114,12 +90,15 @@ namespace Практика_6
             else
                 label1.Text = "Вопрос без текста";
 
-            // Изображение
             XmlNode imageNode = q.SelectSingleNode("image");
             if (imageNode != null)
             {
                 string imgFile = imageNode.InnerText;
                 string fullPath = Path.Combine(Application.StartupPath, imgFile);
+
+                if (!File.Exists(fullPath))
+                {fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, imgFile);}
+
                 if (File.Exists(fullPath))
                 {
                     try
@@ -127,98 +106,61 @@ namespace Практика_6
                         pictureBox1.Image = Image.FromFile(fullPath);
                         pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                     }
-                    catch { pictureBox1.Image = null; }
-                }
-                else
-                {
-                    pictureBox1.Image = null;
-                }
-            }
-            else if (q.Attributes["image"] != null)
-            {
-                string imgFile = q.Attributes["image"].Value;
-                string fullPath = Path.Combine(Application.StartupPath, imgFile);
-                if (File.Exists(fullPath))
-                {
-                    try
+                    catch (Exception ex)
                     {
-                        pictureBox1.Image = Image.FromFile(fullPath);
-                        pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                        pictureBox1.Image = null;
+                        Console.WriteLine($"Ошибка загрузки изображения: {ex.Message}");
                     }
-                    catch { pictureBox1.Image = null; }
                 }
                 else
                 {
                     pictureBox1.Image = null;
+                    MessageBox.Show($"Изображение не найдено: {imgFile}\nИскали в: {fullPath}");
                 }
             }
             else
-            {
-                pictureBox1.Image = null;
-            }
+            {pictureBox1.Image = null;}
 
-            // Варианты ответов (ищем в разных форматах)
-            XmlNodeList answers = q.SelectNodes("answer");
             RadioButton[] rb = { radioButton1, radioButton2, radioButton3, radioButton4 };
 
-            // Если нет answer, ищем correct/wrong
-            if (answers.Count == 0)
+            List<string> allAnswers = new List<string>();
+            string correctAnswer = "";
+
+            XmlNode correctNode = q.SelectSingleNode("correct");
+            if (correctNode != null)
             {
-                // Формат с correct и wrong
-                List<string> allAnswers = new List<string>();
-                XmlNode correctNode = q.SelectSingleNode("correct");
-                if (correctNode != null)
-                    allAnswers.Add(correctNode.InnerText);
-
-                XmlNodeList wrongNodes = q.SelectNodes("wrong");
-                foreach (XmlNode w in wrongNodes)
-                    allAnswers.Add(w.InnerText);
-
-                // Перемешиваем
-                Random rnd = new Random();
-                allAnswers = allAnswers.OrderBy(x => rnd.Next()).ToList();
-
-                for (int i = 0; i < rb.Length && i < allAnswers.Count; i++)
-                {
-                    rb[i].Text = allAnswers[i];
-                    rb[i].Checked = false;
-                    rb[i].Visible = true;
-                }
-
-                // Сохраняем правильный ответ в Tag кнопки для проверки
-                button1.Tag = correctNode?.InnerText;
+                correctAnswer = correctNode.InnerText;
+                allAnswers.Add(correctAnswer);
             }
-            else
+            XmlNodeList wrongNodes = q.SelectNodes("wrong");
+            foreach (XmlNode w in wrongNodes)
             {
-                // Старый формат с answer
-                for (int i = 0; i < rb.Length && i < answers.Count; i++)
-                {
-                    rb[i].Text = answers[i].InnerText;
-                    rb[i].Checked = false;
-                    rb[i].Visible = true;
-                }
-                button1.Tag = null;
+                allAnswers.Add(w.InnerText);
             }
+            Random rnd = new Random();
+            allAnswers = allAnswers.OrderBy(x => rnd.Next()).ToList();
 
-            // Скрываем лишние кнопки
-            for (int i = answers.Count; i < rb.Length; i++)
+            for (int i = 0; i < rb.Length && i < allAnswers.Count; i++)
+            {
+                rb[i].Text = allAnswers[i];
+                rb[i].Checked = false;
+                rb[i].Visible = true;
+            }
+            for (int i = allAnswers.Count; i < rb.Length; i++)
             {
                 rb[i].Visible = false;
             }
+            button1.Tag = correctAnswer;
 
-            // Подсказка
             XmlNode hintNode = q.SelectSingleNode("hint");
             button2.Tag = hintNode?.InnerText ?? "Подсказка отсутствует";
 
             UpdateQuestionCounter();
         }
-
         private void UpdateQuestionCounter()
-        {
-            label4.Text = $"Вопрос {currentIndex + 1}/{currentSession.Count}";
-        }
+        {label4.Text = $"Вопрос {currentIndex + 1}/{currentSession.Count}";}
 
-        private void button1_Click(object sender, EventArgs e)  // Проверка ответа
+        private void button1_Click(object sender, EventArgs e) 
         {
             string selectedAnswer = "";
             RadioButton[] rb = { radioButton1, radioButton2, radioButton3, radioButton4 };
@@ -231,19 +173,15 @@ namespace Практика_6
                     break;
                 }
             }
-
             if (string.IsNullOrEmpty(selectedAnswer))
             {
                 MessageBox.Show("Выберите вариант ответа!");
                 return;
             }
-
             XmlNode currentQ = currentSession[currentIndex];
 
-            // Определяем правильный ответ в зависимости от формата XML
             string correctAnswer = "";
 
-            // Проверяем формат с answer
             XmlNode rightAnswerNode = currentQ.SelectSingleNode("answer[@right='yes']");
             if (rightAnswerNode != null)
             {
@@ -251,14 +189,12 @@ namespace Практика_6
             }
             else
             {
-                // Формат с correct
                 XmlNode correctNode = currentQ.SelectSingleNode("correct");
                 if (correctNode != null)
                 {
                     correctAnswer = correctNode.InnerText;
                 }
             }
-
             int pointsPerQuestion = 100 / currentSession.Count;
 
             if (correctAnswer == selectedAnswer)
@@ -272,7 +208,6 @@ namespace Практика_6
                 MessageBox.Show($"Неправильно! Правильный ответ: {correctAnswer}",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
             UpdateScoreLabel();
             currentIndex++;
 
@@ -281,12 +216,8 @@ namespace Практика_6
             else
                 FinishLevel();
         }
-
         private void UpdateScoreLabel()
-        {
-            label3.Text = $"Счёт: {score}/100";
-        }
-
+        {label2.Text = $"Счёт: {score}/100";}
         private void FinishLevel()
         {
             if (timer != null)
@@ -303,15 +234,13 @@ namespace Практика_6
                     LoadQuestions();
                     StartNewSession();
                     DisplayCurrentQuestion();
-                    timeLeft = 60;
+                    timeLeft = 300;
                     UpdateTimerDisplay();
                     if (timer != null)
                         timer.Start();
                 }
                 else
-                {
-                    this.Close();
-                }
+                {this.Close();}
             }
             else
             {
@@ -320,19 +249,15 @@ namespace Практика_6
                 this.Close();
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)  // Подсказка
+        private void button2_Click(object sender, EventArgs e)  
         {
             string hint = button2.Tag?.ToString() ?? "Нет подсказки";
             MessageBox.Show(hint, "Подсказка", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void UpdateTimerDisplay()
         {
-            // Обновляем отображение таймера
             label3.Text = $"⏱ {timeLeft / 60:D2}:{timeLeft % 60:D2}";
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (timeLeft > 0)
@@ -340,7 +265,6 @@ namespace Практика_6
                 timeLeft--;
                 UpdateTimerDisplay();
             }
-
             if (timeLeft <= 0)
             {
                 if (timer != null)
@@ -350,7 +274,6 @@ namespace Практика_6
                 this.Close();
             }
         }
-
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (timer != null)
