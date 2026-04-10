@@ -49,42 +49,42 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(37, 59);
+            label1.Location = new Point(56, 73);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(72, 28);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "Логин";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(43, 108);
+            label2.Location = new Point(56, 128);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(85, 28);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "Пароль";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(173, 59);
+            textBox1.Location = new Point(173, 67);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(217, 34);
             textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(167, 114);
+            textBox2.Location = new Point(173, 122);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
+            textBox2.Size = new Size(217, 34);
             textBox2.TabIndex = 3;
             // 
             // button1
             // 
-            button1.Location = new Point(144, 246);
+            button1.Location = new Point(123, 225);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(246, 57);
             button1.TabIndex = 4;
-            button1.Text = "button1";
+            button1.Text = "Зарегистроваться";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -92,10 +92,11 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             tabControl1.Location = new Point(24, 21);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(783, 390);
+            tabControl1.Size = new Size(732, 390);
             tabControl1.TabIndex = 5;
             // 
             // tabPage1
@@ -105,10 +106,10 @@
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(textBox2);
             tabPage1.Controls.Add(textBox1);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 37);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(775, 357);
+            tabPage1.Size = new Size(724, 349);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -120,10 +121,10 @@
             tabPage2.Controls.Add(label4);
             tabPage2.Controls.Add(textBox3);
             tabPage2.Controls.Add(textBox4);
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 37);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(775, 357);
+            tabPage2.Size = new Size(724, 349);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -132,45 +133,43 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(50, 51);
+            label3.Location = new Point(79, 73);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(72, 28);
             label3.TabIndex = 5;
-            label3.Text = "label3";
+            label3.Text = "Логин";
             // 
             // button2
             // 
-            button2.Location = new Point(158, 258);
+            button2.Location = new Point(121, 219);
             button2.Name = "button2";
-            button2.Size = new Size(94, 29);
+            button2.Size = new Size(239, 55);
             button2.TabIndex = 9;
-            button2.Text = "button2";
+            button2.Text = "Зарегистроваться";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += this.button2_Click;
+            button2.Click += button2_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(56, 100);
+            label4.Location = new Point(79, 136);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(85, 28);
             label4.TabIndex = 6;
-            label4.Text = "label4";
-           
+            label4.Text = "Пароль";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(180, 106);
+            textBox3.Location = new Point(181, 67);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
+            textBox3.Size = new Size(238, 34);
             textBox3.TabIndex = 8;
-           
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(186, 51);
+            textBox4.Location = new Point(181, 133);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
+            textBox4.Size = new Size(238, 34);
             textBox4.TabIndex = 7;
             textBox4.TextChanged += textBox4_TextChanged;
             // 
